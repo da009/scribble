@@ -75,7 +75,7 @@ public class DrawDemo
     }
     
     /**
-     * Draw a triangle.
+     * Draw a Pentagon.
      */
     public void drawPentagon()
     {
@@ -85,6 +85,20 @@ public class DrawDemo
         for (int i=0; i<5; i++) {
             pen.move(100);
             pen.turn(72);
+        }
+    }
+    
+    /**
+     * Draw a poligon.
+     */
+    public void drawPolygon(int n)
+    {
+        Pen pen = new Pen(200, 200, myCanvas);
+        pen.setColor(Color.GREEN);
+        
+        for (int i=0; i<n; i++) {
+            pen.move(100);
+            pen.turn(360/n);
         }
     }
     
